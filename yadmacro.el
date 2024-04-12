@@ -313,10 +313,10 @@ decrementation)."
         (t
          (setq yadmacro-repeat-count 1)))
   (when yadmacro-printf-debug
-    (message "lc:%s tc:%s lce:%c tck:%s lcc:%c lie:%c lef:%s"
+    (message "lc:%s tc:%s lce:%c tck:%s lce:%c lie:%c lef:%s"
              real-last-command this-command last-command-event
              (this-command-keys)
-             last-command-char
+             last-command-event
              last-input-event
              last-event-frame))
   (let ((lst (yadmacro-get-key-list)))
