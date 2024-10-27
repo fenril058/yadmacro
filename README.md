@@ -29,6 +29,12 @@ With [leaf](https://github.com/conao3/leaf.el)
     :global-minor-mode global-yadmadro-mode)
 ```
 
+Of course, such a setting is also possible.
+```emacs-lisp
+(require 'yadmacro)
+(global-set-key (kbd "<f9>") 'yadmacro)
+```
+
 ## Functions
 
 This package is the tool for automating repetitive tasks
@@ -105,17 +111,41 @@ abc003.txt
 
 You can increase or decrease multiple numbers simultaneously. For example:
 ```
+001010
+002009
+```
+
+If you type this and then press the `yadmacro-key`, the result will be:
+```
+001010
+002009
+003008
+```
+
+
+#### Broken example
+
+The example below was suggested:
+```
 2x1=2
 2x2=4
 ```
 
-If you type this and then press the `yadmacro-key`, the result will be:
+If you type this and then press the `yadmacro-key`, the result will be EXPECTED:
 ```
 2x1=2
 2x2=4
 2x3=6
 ```
 
+BUT, the result will be:
+```
+2x1=2
+2x2=4
+3x2=6
+```
+
+I think the behvior is undesirable.
 
 ## History
 

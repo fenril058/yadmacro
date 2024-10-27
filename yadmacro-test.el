@@ -106,7 +106,7 @@ but fails."
               '(nil 49 51 nil 49 52) '(49 52)))))
 
 (ert-deftest yadmacro-get-numbers-and-position-1 ()
-  "1の位置から３桁分105, 5の位置から2桁分13がある。"
+  "1の位置から3桁分105, 5の位置から2桁分13がある。"
   (should (equal '((1 3 103) (5 2 13))
                  (yadmacro-get-numbers-and-position
                   '(nil 49 48 51 nil 49 51 nil nil)))))
